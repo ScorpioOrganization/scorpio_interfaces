@@ -1,0 +1,12 @@
+builtin_interfaces/Time timestamp
+string hostname
+uint16[] cpu_percent
+uint16 ram_total
+uint16 ram_available
+uint16 ram_used
+uint64 network_received_bps
+uint64 network_sent_bps
+float32 cpu_temp
+uint64 disk_total_mb
+uint64 disk_used_mb
+uint64 disk_available_mb

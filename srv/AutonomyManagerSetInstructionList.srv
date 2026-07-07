@@ -1,0 +1,4 @@
+AutonomyManagerInstructionList instruction_list
+---
+bool success
+string[] error_messages

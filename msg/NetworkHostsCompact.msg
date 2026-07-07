@@ -1,0 +1,4 @@
+uint8 address_first_octet
+uint8 address_second_octet
+uint8 address_third_octet
+uint8[] hosts_last_octets

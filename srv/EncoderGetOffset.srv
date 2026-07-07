@@ -1,0 +1,4 @@
+uint16 id
+---
+float32 offset_value
+bool success

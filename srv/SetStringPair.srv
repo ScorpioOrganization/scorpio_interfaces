@@ -1,0 +1,4 @@
+string data_first
+string data_second
+---
+bool return_data

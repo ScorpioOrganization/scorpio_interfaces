@@ -1,0 +1,4 @@
+uint16 can_id
+---
+scorpio_interfaces/CbEffortLimits response
+bool success

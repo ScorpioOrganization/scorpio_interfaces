@@ -1,0 +1,6 @@
+uint8 class_id
+float32 confidence
+uint16 bounding_rect_left
+uint16 bounding_rect_top
+uint16 bounding_rect_width
+uint16 bounding_rect_height

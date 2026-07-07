@@ -1,0 +1,7 @@
+uint32 can_id
+string device_type
+string device_name
+float32 time_from_last_heartbeat
+float32 time_from_last_restart
+uint16 restart_counter
+bool any_heartbeat_received

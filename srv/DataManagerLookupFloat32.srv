@@ -1,0 +1,5 @@
+builtin_interfaces/Time stamp
+uint32 n
+---
+builtin_interfaces/Time[] stamps
+std_msgs/Float32[] messages

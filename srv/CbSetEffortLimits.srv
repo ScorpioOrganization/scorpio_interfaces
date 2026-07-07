@@ -1,0 +1,3 @@
+scorpio_interfaces/CbEffortLimits msg
+---
+bool success

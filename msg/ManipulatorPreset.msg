@@ -1,0 +1,8 @@
+string preset_name
+float32 manipulator_base_angle
+float32 manipulator_shoulder_angle
+float32 manipulator_elbow_angle
+float32 manipulator_wrist_angle
+float32 manipulator_basiacowa_angle
+float32 manipulator_rotator_angle
+float32 manipulator_gripper_angle

@@ -1,0 +1,4 @@
+uint16 id
+float32 new_value
+---
+bool success

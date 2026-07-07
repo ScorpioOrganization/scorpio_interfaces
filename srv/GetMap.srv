@@ -1,0 +1,3 @@
+bool raw_map # If set to false the service should return the map with intraversable points accounted for.
+---
+Map map

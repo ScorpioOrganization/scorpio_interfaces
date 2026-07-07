@@ -1,0 +1,3 @@
+MapDetails details
+
+int16[] points
