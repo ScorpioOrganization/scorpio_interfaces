@@ -84,6 +84,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/RcClassificationControl.srv"
   "srv/SetStringPair.srv"
   "srv/StringToString.srv"
+  "srv/ZedToPoint.srv"
   DEPENDENCIES std_msgs sensor_msgs tf2_msgs
 )
 
