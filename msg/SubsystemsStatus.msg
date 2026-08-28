@@ -123,7 +123,7 @@ bool can_board_drill_is_ok
 bool can_board_microscope_is_ok
 bool can_board_antenna_rotor_is_ok
 bool can_board_solenoid_is_ok
-bool can_board_oak_horizontal_is_ok
+bool can_board_dual_axis_camera_is_ok
 bool can_board_oak_vertical_is_ok
 bool can_board_ulep_is_ok
 bool vesc_drive_wheel_1_is_ok
