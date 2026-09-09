@@ -3,9 +3,11 @@ name: CI-scorpio_interfaces
 on:
   workflow_dispatch:
   push:
-    branches: [ master ]
+    branches:
+      - master
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -13,17 +15,20 @@ concurrency:
 
 jobs:
   build_and_test:
+    name: Build and Test
     runs-on: ubuntu-22.04
+
     strategy:
       matrix:
-        ros-distro: [ humble ]
-        
+        ros-distro:
+          - humble
+
     container:
       image: ros:${{ matrix.ros-distro }}-ros-base
 
     env:
       ROS_DISTRO: ${{ matrix.ros-distro }}
-      TZ: 'Europe/Warsaw'
+      TZ: Europe/Warsaw
 
     steps:
       - name: Checkout repo
@@ -34,12 +39,17 @@ jobs:
       - name: Install dependencies
         shell: bash
         run: |
-          apt-get update && apt-get install -y --no-install-recommends python3-colcon-common-extensions
+          apt-get update && apt-get install -y --no-install-recommends \
+            python3-colcon-common-extensions
           rosdep update --rosdistro ${{ matrix.ros-distro }}
-          rosdep install -i --from-paths src --rosdistro ${{ matrix.ros-distro }} -y
+          rosdep install -i --from-paths src \
+            --rosdistro ${{ matrix.ros-distro }} \
+            -y
 
       - name: Build
         shell: bash
         run: |
           . /opt/ros/${{ matrix.ros-distro }}/setup.bash
-          colcon build --packages-select scorpio_interfaces --event-handlers console_cohesion+
+          colcon build \
+            --packages-select scorpio_interfaces \
+            --event-handlers console_cohesion+
