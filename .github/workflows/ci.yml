@@ -1,0 +1,45 @@
+name: CI-scorpio_interfaces
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        ros-distro: [ humble ]
+        
+    container:
+      image: ros:${{ matrix.ros-distro }}-ros-base
+
+    env:
+      ROS_DISTRO: ${{ matrix.ros-distro }}
+      TZ: 'Europe/Warsaw'
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          path: src/scorpio_interfaces
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          apt-get update && apt-get install -y --no-install-recommends python3-colcon-common-extensions
+          rosdep update --rosdistro ${{ matrix.ros-distro }}
+          rosdep install -i --from-paths src --rosdistro ${{ matrix.ros-distro }} -y
+
+      - name: Build
+        shell: bash
+        run: |
+          . /opt/ros/${{ matrix.ros-distro }}/setup.bash
+          colcon build --packages-select scorpio_interfaces --event-handlers console_cohesion+
