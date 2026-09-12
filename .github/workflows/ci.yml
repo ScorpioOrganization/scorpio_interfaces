@@ -15,13 +15,14 @@ concurrency:
 
 jobs:
   build_and_test:
-    name: Build and Test
-    runs-on: ubuntu-22.04
+    name: Build
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
         ros-distro:
           - humble
+          - jazzy
 
     container:
       image: ros:${{ matrix.ros-distro }}-ros-base
@@ -52,4 +53,5 @@ jobs:
           . /opt/ros/${{ matrix.ros-distro }}/setup.bash
           colcon build \
             --packages-select scorpio_interfaces \
+            --cmake-args -DCMAKE_BUILD_TYPE=Release \
             --event-handlers console_cohesion+
