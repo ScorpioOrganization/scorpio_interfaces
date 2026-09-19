@@ -25,6 +25,7 @@ bool image_detection_rect_is_working
 bool drillcam_is_working
 bool samplecam_is_working
 bool dualaxiscam_is_working
+bool mast_rear_is_working
 
 # Cameras is_enabled data fields
 bool zed_left_is_enabled
@@ -43,6 +44,7 @@ bool image_detection_rect_is_enabled
 bool drillcam_is_enabled
 bool samplecam_is_enabled
 bool dualaxiscam_is_enabled
+bool mast_rear_is_enabled
 
 # Cameras framerate fields
 uint8 zed_left_framerate
@@ -61,6 +63,7 @@ uint8 image_detection_rect_framerate
 uint8 drillcam_framerate
 uint8 samplecam_framerate
 uint8 dualaxiscam_framerate
+uint8 mast_rear_framerate
 
 # Simple data fields
 bool robot_pose_is_ok
