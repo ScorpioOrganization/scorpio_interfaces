@@ -60,7 +60,7 @@ jobs:
         shell: bash
         run: |
           . /opt/ros/${{ matrix.ros-distro }}/setup.bash
-          . /install/setup.bash
+          . install/setup.bash
           colcon test \
             --packages-select scorpio_interfaces \
             --event-handlers console_cohesion+
