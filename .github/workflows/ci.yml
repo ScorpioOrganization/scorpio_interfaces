@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           path: src/scorpio_interfaces
 
@@ -55,3 +55,18 @@ jobs:
             --packages-select scorpio_interfaces \
             --cmake-args -DCMAKE_BUILD_TYPE=Release \
             --event-handlers console_cohesion+
+
+      - name: Test
+        shell: bash
+        run: |
+          . /opt/ros/${{ matrix.ros-distro }}/setup.bash
+          . /install/setup.bash
+          colcon test \
+            --packages-select scorpio_interfaces \
+            --event-handlers console_cohesion+
+
+      - name: Test Result
+        shell: bash
+        run: |
+          . /opt/ros/${{ matrix.ros-distro }}/setup.bash
+          colcon test-result --verbose
