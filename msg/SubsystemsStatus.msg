@@ -3,7 +3,7 @@ bool checkpoint_manager_is_available
 bool network_scanner_is_working
 bool obrotowa_movement_driver_is_working
 bool rosnode_status_list_is_working
-bool ubiquiti_status_is_working
+bool routerboard_monitor_is_working
 bool rosout_monitor_is_working
 bool rover_rpi_machine_resources_is_working
 bool rover_jetson_machine_resources_is_working
