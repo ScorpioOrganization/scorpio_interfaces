@@ -17,7 +17,6 @@ bool mast_left_front_is_working
 bool mast_left_rear_is_working
 bool mast_right_front_is_working
 bool mast_right_rear_is_working
-bool rover_visualization_is_working
 bool manicam_is_working
 bool birds_eye_is_working
 bool obrotowa_is_working
@@ -36,7 +35,6 @@ bool mast_left_front_is_enabled
 bool mast_left_rear_is_enabled
 bool mast_right_front_is_enabled
 bool mast_right_rear_is_enabled
-bool rover_visualization_is_enabled
 bool manicam_is_enabled
 bool birds_eye_is_enabled
 bool obrotowa_is_enabled
@@ -55,7 +53,6 @@ uint8 mast_left_front_framerate
 uint8 mast_left_rear_framerate
 uint8 mast_right_front_framerate
 uint8 mast_right_rear_framerate
-uint8 rover_visualization_framerate
 uint8 manicam_framerate
 uint8 birds_eye_framerate
 uint8 obrotowa_framerate
