@@ -2,6 +2,6 @@
 # Send the current values (RamanSpectrometerStatus.settings) with the fields to change.
 RamanSettings settings
 ---
-bool success
 string message
 RamanSettings applied
+bool success
