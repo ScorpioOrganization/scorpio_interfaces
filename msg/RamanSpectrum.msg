@@ -1,5 +1,5 @@
-# One spectrum from the Raman spectrometer (raman_spectrometer node, ~/spectrum).
-# Pixel i maps to element i of both rows of ~/spectral_axis
+# One spectrum from the Raman spectrometer (raman_spectrometer node, ~/get_spectrum).
+# Pixel i maps to element i of both rows of ~/get_spectral_axis
 # (std_msgs/Float32MultiArray, row 0 wavelength [nm], row 1 Raman shift [cm-1]).
 # The settings used are in RamanSpectrometerStatus.settings.
 std_msgs/Header header

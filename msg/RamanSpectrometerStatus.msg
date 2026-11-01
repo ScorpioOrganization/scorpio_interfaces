@@ -1,4 +1,4 @@
-# Raman spectrometer state (raman_spectrometer node, ~/status, latched).
+# Raman spectrometer state (raman_spectrometer node, ~/get_status, latched).
 # Published at status_rate_hz and on every change.
 uint8 STATE_DISCONNECTED = 0
 uint8 STATE_CONNECTING = 1
