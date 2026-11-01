@@ -1,0 +1,7 @@
+# Change all Raman spectrometer settings at once; applied without reconnecting.
+# Send the current values (RamanSpectrometerStatus.settings) with the fields to change.
+RamanSettings settings
+---
+bool success
+string message
+RamanSettings applied

@@ -1,0 +1,12 @@
+# Rank the loaded reference spectra against the last spectrum and select the best one.
+# method: "correlation" (default, Pearson on baseline-removed spectra, higher = better)
+#         "abs_diff"    (sum |live - reference scaled to live max| from match_start_pixel,
+#                        lower = better)
+string method
+uint16 top_n                  # 0 = all
+---
+bool success
+string message
+string[] names                # best first
+float64[] scores
+int32[] indices
