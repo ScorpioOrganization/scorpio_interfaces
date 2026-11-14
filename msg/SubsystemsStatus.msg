@@ -26,6 +26,7 @@ bool drillcam_is_working
 bool samplecam_is_working
 bool dualaxiscam_is_working
 bool mast_rear_is_working
+bool microscope_camera_is_working
 
 # Cameras is_enabled data fields
 bool zed_left_is_enabled
