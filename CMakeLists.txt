@@ -60,6 +60,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/RamanSpectrum.msg"
   "msg/RoverVisualizationShowElement.msg"
   "msg/StatusLED.msg"
+  "msg/StreamSettings.msg"
   "msg/StringArray.msg"
   "msg/SubsystemsStatus.msg"
   "srv/AutonomyManagerGetInstructionList.srv"
