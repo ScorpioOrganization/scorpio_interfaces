@@ -12,6 +12,9 @@ uint8 state
 # STOPPED stays until ~/reset or until the commands pause (the mover gave up); a stop for an
 # obstacle in the corridor is not latched and lets motion away from it through
 bool latched
+# The localization (Fast-LIO) cannot be believed: stale, jumped or turning unlike the gyro. The rover
+# stays stopped until ~/reset_localization, which ~/reset does not replace
+bool localization_fault
 # Why the commands are slowed or stopped, empty when OK
 string reason
 # 0..1, the factor applied to the forwarded commands
